@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styles from '../styles/Home.module.css'
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
 
 
 const Table = ({ dataKeys, data, query }) => {
@@ -17,21 +16,25 @@ const Table = ({ dataKeys, data, query }) => {
   console.log(totalPage)
 
 
+  
+
   if (!(data.length)) {
     return (
       <p>No Data Found</p>
     )
   }
   else if (query != "") {
-
     return (
       <div>
-        <table className={styles.table}>
-          <tbody>
-            {(dataKeys).map((data, index) => {
+        <table className={styles.table}>    
+          <thead>
+          <tr>
+          {(dataKeys).map((data, index) => {
               return <th key={index}>{data}</th>
             })}
-
+          </tr>
+           </thead>
+           <tbody>
             {(data).slice(start, count).map((item, id) => (
               <tr className={styles.row} key={id}>
                 {(Object.keys(item)).map((data, index) => (
@@ -70,12 +73,15 @@ const Table = ({ dataKeys, data, query }) => {
   else {
     return (
       <div>
-        <table className={styles.table}>
-          <tbody>
-            {(dataKeys).map((data, index) => {
+        <table className={styles.table}>         
+           <thead>
+          <tr>
+          {(dataKeys).map((data, index) => {
               return <th key={index}>{data}</th>
             })}
-
+          </tr>
+           </thead>
+           <tbody>
             {(displayUsers).map((item, id) => (
               <tr className={styles.row} key={id}>
                 {(Object.keys(item)).map((data, index) => (
@@ -105,6 +111,28 @@ const Table = ({ dataKeys, data, query }) => {
 export default Table
 
 
+//       <table>
+//   <thead>
+//     <tr>
+//       <th>name</th>
+//       <th>age</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>john</td>
+//       <td>33</td>
+//     </tr>
+//     <tr>
+//       <td>smith</td>
+//       <td>22</td>
+//     </tr>
+//     <tr>
+//       <td>jane</td>
+//       <td>24</td>
+//     </tr>
+//   </tbody>
+// </table>
 
 
 {/* <div>
@@ -136,3 +164,6 @@ export default Table
         )
        }
       </div> */}
+
+
+
