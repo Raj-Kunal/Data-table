@@ -12,7 +12,7 @@ const Table = ({ dataKeys, data, query }) => {
   const pagesVisited = pageNumber * userPerPage;
   const displayUsers = data?.slice(pagesVisited, userPerPage + pagesVisited)
   // console.log(displayUsers)
-  const totalPage = Math.ceil(data.length / userPerPage)
+  const totalPage = Math.ceil(data?.length / userPerPage)
   // console.log(totalPage)
 
 
@@ -92,7 +92,7 @@ const Table = ({ dataKeys, data, query }) => {
           </tbody>
         </table>
         {
-          data.length - pagesVisited > userPerPage && (
+          data?.length - pagesVisited > userPerPage && (
             <div className={styles.btnContainer}>
               <div>
                 <button className={styles.btn} onClick={() => setPageNumber(prev => prev - 1)}>prev</button>
