@@ -1,3 +1,20 @@
+## Build a Datatable in ReactJS, Sort, Filter, Page Records
+
+## What I learned from this project
+- How to iterate over an array
+- How to iterate over an object
+- How to extract reusable components
+- How to use render props to make components flexible
+- How to sort and modify collections and state
+- How to filter collections and state
+- How to use conditional rendering
+- React, NextJS, and programming best practices and general knowledge
+
+## See this in action!
+https://data-table-ten.vercel.app/
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
