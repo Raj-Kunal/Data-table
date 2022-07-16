@@ -10,7 +10,7 @@ const Table = ({ dataKeys, data, query }) => {
 
   const userPerPage = 10;
   const pagesVisited = pageNumber * userPerPage;
-  const displayUsers = data.slice(pagesVisited, userPerPage + pagesVisited)
+  const displayUsers = data?.slice(pagesVisited, userPerPage + pagesVisited)
   // console.log(displayUsers)
   const totalPage = Math.ceil(data.length / userPerPage)
   // console.log(totalPage)
